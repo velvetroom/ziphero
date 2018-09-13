@@ -10,7 +10,10 @@
 		DA416059214A63FA007A66E5 /* sample2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DA416057214A63FA007A66E5 /* sample2.jpg */; };
 		DA41605A214A63FA007A66E5 /* sample1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DA416058214A63FA007A66E5 /* sample1.jpg */; };
 		DA41605C214A68E9007A66E5 /* libZipHero.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DA646933214A547A00BE9922 /* libZipHero.a */; };
-		DA64693A214A54C000BE9922 /* TestMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA646939214A54C000BE9922 /* TestMap.swift */; };
+		DA41605E214A7A74007A66E5 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA41605D214A7A74007A66E5 /* Package.swift */; };
+		DA416062214A7F91007A66E5 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA416061214A7F91007A66E5 /* Item.swift */; };
+		DA416064214A80D9007A66E5 /* Exception.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA416063214A80D9007A66E5 /* Exception.swift */; };
+		DA64693A214A54C000BE9922 /* TestPackage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA646939214A54C000BE9922 /* TestPackage.swift */; };
 		DA64693D214A54C900BE9922 /* ZipHero.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA64693C214A54C900BE9922 /* ZipHero.swift */; };
 /* End PBXBuildFile section */
 
@@ -39,10 +42,13 @@
 /* Begin PBXFileReference section */
 		DA416057214A63FA007A66E5 /* sample2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sample2.jpg; sourceTree = "<group>"; };
 		DA416058214A63FA007A66E5 /* sample1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sample1.jpg; sourceTree = "<group>"; };
+		DA41605D214A7A74007A66E5 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		DA416061214A7F91007A66E5 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		DA416063214A80D9007A66E5 /* Exception.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exception.swift; sourceTree = "<group>"; };
 		DA646933214A547A00BE9922 /* libZipHero.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libZipHero.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA646934214A547A00BE9922 /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA646936214A54AC00BE9922 /* tests.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = tests.plist; sourceTree = "<group>"; };
-		DA646939214A54C000BE9922 /* TestMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestMap.swift; sourceTree = "<group>"; };
+		DA646939214A54C000BE9922 /* TestPackage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestPackage.swift; sourceTree = "<group>"; };
 		DA64693C214A54C900BE9922 /* ZipHero.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZipHero.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -97,7 +103,7 @@
 		DA646938214A54C000BE9922 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				DA646939214A54C000BE9922 /* TestMap.swift */,
+				DA646939214A54C000BE9922 /* TestPackage.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -106,6 +112,9 @@
 			isa = PBXGroup;
 			children = (
 				DA64693C214A54C900BE9922 /* ZipHero.swift */,
+				DA41605D214A7A74007A66E5 /* Package.swift */,
+				DA416061214A7F91007A66E5 /* Item.swift */,
+				DA416063214A80D9007A66E5 /* Exception.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -201,6 +210,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA416064214A80D9007A66E5 /* Exception.swift in Sources */,
+				DA416062214A7F91007A66E5 /* Item.swift in Sources */,
+				DA41605E214A7A74007A66E5 /* Package.swift in Sources */,
 				DA64693D214A54C900BE9922 /* ZipHero.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -209,7 +221,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA64693A214A54C000BE9922 /* TestMap.swift in Sources */,
+				DA64693A214A54C000BE9922 /* TestPackage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
