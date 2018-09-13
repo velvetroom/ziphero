@@ -7,8 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DA2F9A71214A5316003A801F /* ZipHero.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2F9A70214A5316003A801F /* ZipHero.swift */; };
+		DA64693A214A54C000BE9922 /* TestMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA646939214A54C000BE9922 /* TestMap.swift */; };
+		DA64693D214A54C900BE9922 /* ZipHero.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA64693C214A54C900BE9922 /* ZipHero.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DA2F9A80214A5346003A801F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DA2F9A65214A5316003A801F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DA2F9A6C214A5316003A801F;
+			remoteInfo = ZipHero;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		DA2F9A6B214A5316003A801F /* CopyFiles */ = {
@@ -23,12 +34,22 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		DA2F9A6D214A5316003A801F /* libZipHero.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libZipHero.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		DA2F9A70214A5316003A801F /* ZipHero.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZipHero.swift; sourceTree = "<group>"; };
+		DA646933214A547A00BE9922 /* libZipHero.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libZipHero.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA646934214A547A00BE9922 /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA646936214A54AC00BE9922 /* tests.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = tests.plist; sourceTree = "<group>"; };
+		DA646939214A54C000BE9922 /* TestMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestMap.swift; sourceTree = "<group>"; };
+		DA64693C214A54C900BE9922 /* ZipHero.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZipHero.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		DA2F9A6A214A5316003A801F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA2F9A78214A5346003A801F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -41,25 +62,36 @@
 		DA2F9A64214A5316003A801F = {
 			isa = PBXGroup;
 			children = (
-				DA2F9A6F214A5316003A801F /* ZipHero */,
-				DA2F9A6E214A5316003A801F /* Products */,
+				DA64693B214A54C900BE9922 /* Source */,
+				DA646938214A54C000BE9922 /* Tests */,
+				DA646937214A54C000BE9922 /* Resources */,
+				DA646936214A54AC00BE9922 /* tests.plist */,
+				DA646933214A547A00BE9922 /* libZipHero.a */,
+				DA646934214A547A00BE9922 /* Tests.xctest */,
 			);
 			sourceTree = "<group>";
 		};
-		DA2F9A6E214A5316003A801F /* Products */ = {
+		DA646937214A54C000BE9922 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				DA2F9A6D214A5316003A801F /* libZipHero.a */,
 			);
-			name = Products;
+			path = Resources;
 			sourceTree = "<group>";
 		};
-		DA2F9A6F214A5316003A801F /* ZipHero */ = {
+		DA646938214A54C000BE9922 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				DA2F9A70214A5316003A801F /* ZipHero.swift */,
+				DA646939214A54C000BE9922 /* TestMap.swift */,
 			);
-			path = ZipHero;
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		DA64693B214A54C900BE9922 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				DA64693C214A54C900BE9922 /* ZipHero.swift */,
+			);
+			path = Source;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -79,8 +111,26 @@
 			);
 			name = ZipHero;
 			productName = ZipHero;
-			productReference = DA2F9A6D214A5316003A801F /* libZipHero.a */;
+			productReference = DA646933214A547A00BE9922 /* libZipHero.a */;
 			productType = "com.apple.product-type.library.static";
+		};
+		DA2F9A7A214A5346003A801F /* Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DA2F9A82214A5346003A801F /* Build configuration list for PBXNativeTarget "Tests" */;
+			buildPhases = (
+				DA2F9A77214A5346003A801F /* Sources */,
+				DA2F9A78214A5346003A801F /* Frameworks */,
+				DA2F9A79214A5346003A801F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DA2F9A81214A5346003A801F /* PBXTargetDependency */,
+			);
+			name = Tests;
+			productName = Tests;
+			productReference = DA646934214A547A00BE9922 /* Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -95,6 +145,9 @@
 					DA2F9A6C214A5316003A801F = {
 						CreatedOnToolsVersion = 10.0;
 					};
+					DA2F9A7A214A5346003A801F = {
+						CreatedOnToolsVersion = 10.0;
+					};
 				};
 			};
 			buildConfigurationList = DA2F9A68214A5316003A801F /* Build configuration list for PBXProject "ZipHero" */;
@@ -105,25 +158,52 @@
 				en,
 			);
 			mainGroup = DA2F9A64214A5316003A801F;
-			productRefGroup = DA2F9A6E214A5316003A801F /* Products */;
+			productRefGroup = DA2F9A64214A5316003A801F;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				DA2F9A6C214A5316003A801F /* ZipHero */,
+				DA2F9A7A214A5346003A801F /* Tests */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DA2F9A79214A5346003A801F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		DA2F9A69214A5316003A801F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA2F9A71214A5316003A801F /* ZipHero.swift in Sources */,
+				DA64693D214A54C900BE9922 /* ZipHero.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA2F9A77214A5346003A801F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA64693A214A54C000BE9922 /* TestMap.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DA2F9A81214A5346003A801F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DA2F9A6C214A5316003A801F /* ZipHero */;
+			targetProxy = DA2F9A80214A5346003A801F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		DA2F9A72214A5316003A801F /* Debug */ = {
@@ -134,7 +214,6 @@
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
@@ -177,13 +256,15 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -195,7 +276,6 @@
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
@@ -221,7 +301,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -232,12 +312,14 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.2;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -250,7 +332,6 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -263,7 +344,44 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		DA2F9A83214A5346003A801F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = tests.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = iturbide.ZipHero.Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DA2F9A84214A5346003A801F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = tests.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = iturbide.ZipHero.Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -285,6 +403,15 @@
 			buildConfigurations = (
 				DA2F9A75214A5316003A801F /* Debug */,
 				DA2F9A76214A5316003A801F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DA2F9A82214A5346003A801F /* Build configuration list for PBXNativeTarget "Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA2F9A83214A5346003A801F /* Debug */,
+				DA2F9A84214A5346003A801F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
