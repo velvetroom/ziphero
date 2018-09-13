@@ -66,8 +66,8 @@ class TestPackage:XCTestCase {
         XCTAssertEqual(headerSize + sample1Size + separatorSize, package.items[1].start)
     }
     
-    func testBlobSize() {
+    func testDataSize() {
         guard let package = try? zip.package(directory:directory) else { return XCTFail() }
-        XCTAssertEqual(sample1Size + sample2Size + headerSize + separatorSize, package.blob.count)
+        XCTAssertEqual(sample1Size + sample2Size + headerSize + separatorSize, package.data.count)
     }
 }

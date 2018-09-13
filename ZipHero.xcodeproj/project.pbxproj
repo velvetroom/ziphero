@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA02E6A4214A96A700CDC13A /* export.data in Resources */ = {isa = PBXBuildFile; fileRef = DA02E6A3214A96A700CDC13A /* export.data */; };
+		DA02E6A6214AAE2000CDC13A /* export.json in Resources */ = {isa = PBXBuildFile; fileRef = DA02E6A5214AAE2000CDC13A /* export.json */; };
 		DA416059214A63FA007A66E5 /* sample2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DA416057214A63FA007A66E5 /* sample2.jpg */; };
 		DA41605A214A63FA007A66E5 /* sample1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DA416058214A63FA007A66E5 /* sample1.jpg */; };
 		DA41605C214A68E9007A66E5 /* libZipHero.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DA646933214A547A00BE9922 /* libZipHero.a */; };
@@ -40,6 +42,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		DA02E6A3214A96A700CDC13A /* export.data */ = {isa = PBXFileReference; lastKnownFileType = file; path = export.data; sourceTree = "<group>"; };
+		DA02E6A5214AAE2000CDC13A /* export.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = export.json; sourceTree = "<group>"; };
 		DA416057214A63FA007A66E5 /* sample2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sample2.jpg; sourceTree = "<group>"; };
 		DA416058214A63FA007A66E5 /* sample1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sample1.jpg; sourceTree = "<group>"; };
 		DA41605D214A7A74007A66E5 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
@@ -94,6 +98,8 @@
 		DA646937214A54C000BE9922 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				DA02E6A5214AAE2000CDC13A /* export.json */,
+				DA02E6A3214A96A700CDC13A /* export.data */,
 				DA416058214A63FA007A66E5 /* sample1.jpg */,
 				DA416057214A63FA007A66E5 /* sample2.jpg */,
 			);
@@ -199,6 +205,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA416059214A63FA007A66E5 /* sample2.jpg in Resources */,
+				DA02E6A6214AAE2000CDC13A /* export.json in Resources */,
+				DA02E6A4214A96A700CDC13A /* export.data in Resources */,
 				DA41605A214A63FA007A66E5 /* sample1.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
