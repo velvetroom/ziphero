@@ -15,8 +15,14 @@
 		DA41605E214A7A74007A66E5 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA41605D214A7A74007A66E5 /* Package.swift */; };
 		DA416062214A7F91007A66E5 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA416061214A7F91007A66E5 /* Item.swift */; };
 		DA416064214A80D9007A66E5 /* Exception.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA416063214A80D9007A66E5 /* Exception.swift */; };
-		DA64693A214A54C000BE9922 /* TestPackage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA646939214A54C000BE9922 /* TestPackage.swift */; };
+		DA64693A214A54C000BE9922 /* TestPack.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA646939214A54C000BE9922 /* TestPack.swift */; };
 		DA64693D214A54C900BE9922 /* ZipHero.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA64693C214A54C900BE9922 /* ZipHero.swift */; };
+		DA6D4D4D214BCA6C00E2F8CD /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6D4D4C214BCA6C00E2F8CD /* Data.swift */; };
+		DAB1D6BB214B8DC7002DA9F2 /* sample3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DAB1D6BA214B8DC7002DA9F2 /* sample3.jpg */; };
+		DAB1D6BD214B918A002DA9F2 /* TestUnpack.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB1D6BC214B918A002DA9F2 /* TestUnpack.swift */; };
+		DAB1D6BF214BA0E1002DA9F2 /* TestZip.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB1D6BE214BA0E1002DA9F2 /* TestZip.swift */; };
+		DAB1D6C1214BB0D0002DA9F2 /* TestUnzip.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB1D6C0214BB0D0002DA9F2 /* TestUnzip.swift */; };
+		DAB1D6C3214BB1ED002DA9F2 /* zip.data in Resources */ = {isa = PBXBuildFile; fileRef = DAB1D6C2214BB1ED002DA9F2 /* zip.data */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,8 +58,14 @@
 		DA646933214A547A00BE9922 /* libZipHero.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libZipHero.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA646934214A547A00BE9922 /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA646936214A54AC00BE9922 /* tests.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = tests.plist; sourceTree = "<group>"; };
-		DA646939214A54C000BE9922 /* TestPackage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestPackage.swift; sourceTree = "<group>"; };
+		DA646939214A54C000BE9922 /* TestPack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestPack.swift; sourceTree = "<group>"; };
 		DA64693C214A54C900BE9922 /* ZipHero.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZipHero.swift; sourceTree = "<group>"; };
+		DA6D4D4C214BCA6C00E2F8CD /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		DAB1D6BA214B8DC7002DA9F2 /* sample3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sample3.jpg; sourceTree = "<group>"; };
+		DAB1D6BC214B918A002DA9F2 /* TestUnpack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUnpack.swift; sourceTree = "<group>"; };
+		DAB1D6BE214BA0E1002DA9F2 /* TestZip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestZip.swift; sourceTree = "<group>"; };
+		DAB1D6C0214BB0D0002DA9F2 /* TestUnzip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUnzip.swift; sourceTree = "<group>"; };
+		DAB1D6C2214BB1ED002DA9F2 /* zip.data */ = {isa = PBXFileReference; lastKnownFileType = file; path = zip.data; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,10 +110,12 @@
 		DA646937214A54C000BE9922 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				DAB1D6C2214BB1ED002DA9F2 /* zip.data */,
 				DA02E6A5214AAE2000CDC13A /* export.json */,
 				DA02E6A3214A96A700CDC13A /* export.data */,
 				DA416058214A63FA007A66E5 /* sample1.jpg */,
 				DA416057214A63FA007A66E5 /* sample2.jpg */,
+				DAB1D6BA214B8DC7002DA9F2 /* sample3.jpg */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -109,7 +123,10 @@
 		DA646938214A54C000BE9922 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				DA646939214A54C000BE9922 /* TestPackage.swift */,
+				DA646939214A54C000BE9922 /* TestPack.swift */,
+				DAB1D6BC214B918A002DA9F2 /* TestUnpack.swift */,
+				DAB1D6BE214BA0E1002DA9F2 /* TestZip.swift */,
+				DAB1D6C0214BB0D0002DA9F2 /* TestUnzip.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -120,6 +137,7 @@
 				DA64693C214A54C900BE9922 /* ZipHero.swift */,
 				DA41605D214A7A74007A66E5 /* Package.swift */,
 				DA416061214A7F91007A66E5 /* Item.swift */,
+				DA6D4D4C214BCA6C00E2F8CD /* Data.swift */,
 				DA416063214A80D9007A66E5 /* Exception.swift */,
 			);
 			path = Source;
@@ -205,9 +223,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA416059214A63FA007A66E5 /* sample2.jpg in Resources */,
+				DAB1D6BB214B8DC7002DA9F2 /* sample3.jpg in Resources */,
 				DA02E6A6214AAE2000CDC13A /* export.json in Resources */,
 				DA02E6A4214A96A700CDC13A /* export.data in Resources */,
 				DA41605A214A63FA007A66E5 /* sample1.jpg in Resources */,
+				DAB1D6C3214BB1ED002DA9F2 /* zip.data in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,6 +239,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA416064214A80D9007A66E5 /* Exception.swift in Sources */,
+				DA6D4D4D214BCA6C00E2F8CD /* Data.swift in Sources */,
 				DA416062214A7F91007A66E5 /* Item.swift in Sources */,
 				DA41605E214A7A74007A66E5 /* Package.swift in Sources */,
 				DA64693D214A54C900BE9922 /* ZipHero.swift in Sources */,
@@ -229,7 +250,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA64693A214A54C000BE9922 /* TestPackage.swift in Sources */,
+				DAB1D6C1214BB0D0002DA9F2 /* TestUnzip.swift in Sources */,
+				DAB1D6BF214BA0E1002DA9F2 /* TestZip.swift in Sources */,
+				DA64693A214A54C000BE9922 /* TestPack.swift in Sources */,
+				DAB1D6BD214B918A002DA9F2 /* TestUnpack.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

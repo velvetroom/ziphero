@@ -1,11 +1,11 @@
 Pod::Spec.new do |s|
 s.name             = 'ZipHero'
-s.version          = '1.0.0'
+s.version          = '1.0.15'
 s.summary          = 'Package your files'
 s.description      = <<-DESC
 Package and depackage multiple files into 1 single file
 DESC
-s.homepage         = 'https://github.com/velvetroom/ziperhero'
+s.homepage         = 'https://github.com/velvetroom/ziphero'
 s.license          = { :type => "MIT", :file => "LICENSE" }
 s.author           = { 'iturbide' => 'ziphero@iturbi.de' }
 s.platform         = :ios, '9.0'
