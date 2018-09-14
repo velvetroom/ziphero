@@ -20,6 +20,7 @@
 		DAB1D6B9214B8C71002DA9F2 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB1D6B8214B8C71002DA9F2 /* Data.swift */; };
 		DAB1D6BB214B8DC7002DA9F2 /* sample3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DAB1D6BA214B8DC7002DA9F2 /* sample3.jpg */; };
 		DAB1D6BD214B918A002DA9F2 /* TestUnpack.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB1D6BC214B918A002DA9F2 /* TestUnpack.swift */; };
+		DAB1D6BF214BA0E1002DA9F2 /* TestZip.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB1D6BE214BA0E1002DA9F2 /* TestZip.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 		DAB1D6B8214B8C71002DA9F2 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		DAB1D6BA214B8DC7002DA9F2 /* sample3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sample3.jpg; sourceTree = "<group>"; };
 		DAB1D6BC214B918A002DA9F2 /* TestUnpack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUnpack.swift; sourceTree = "<group>"; };
+		DAB1D6BE214BA0E1002DA9F2 /* TestZip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestZip.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +120,7 @@
 			children = (
 				DA646939214A54C000BE9922 /* TestPack.swift */,
 				DAB1D6BC214B918A002DA9F2 /* TestUnpack.swift */,
+				DAB1D6BE214BA0E1002DA9F2 /* TestZip.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -240,6 +243,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAB1D6BF214BA0E1002DA9F2 /* TestZip.swift in Sources */,
 				DA64693A214A54C000BE9922 /* TestPack.swift in Sources */,
 				DAB1D6BD214B918A002DA9F2 /* TestUnpack.swift in Sources */,
 			);

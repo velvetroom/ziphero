@@ -10,7 +10,7 @@ class TestPack:XCTestCase {
     
     override func setUp() {
         zip = ZipHero()
-        directory = URL(fileURLWithPath:NSTemporaryDirectory()).appendingPathComponent("samples")
+        directory = URL(fileURLWithPath:NSTemporaryDirectory()).appendingPathComponent("pack")
         try! FileManager.default.createDirectory(at:directory, withIntermediateDirectories:true)
         let sample1 = try! Data.init(contentsOf:Bundle(for:TestPack.self).url(
             forResource:"sample1", withExtension:"jpg")!)
@@ -30,7 +30,7 @@ class TestPack:XCTestCase {
         try! FileManager.default.removeItem(at:directory)
     }
     
-    func testPackageSuccedes() {
+    func testPackSuccedes() {
         XCTAssertNoThrow(try zip.pack(directory:directory))
     }
     
