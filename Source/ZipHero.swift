@@ -8,11 +8,15 @@ public class ZipHero {
         var data = Data()
         let package = try pack(directory:directory)
         let items = try JSONEncoder().encode(package.items)
+        data.append(header.data(using:.utf8)!)
         data.append(value:items.count)
-        data.append(value:header)
         data.append(items)
         data.append(package.data)
         return data
+    }
+    
+    public func unzip(data:Data, directory:URL) throws {
+        try unpack(data:data, items:try unzipItems(data:data), destination:directory)
     }
     
     func pack(directory:URL) throws -> Package {
@@ -48,5 +52,15 @@ public class ZipHero {
                throw Exception.invalidData
             }
         }
+    }
+    
+    private func unzipItems(data:Data) throws -> [Item] {
+        guard
+            data.count > 24,
+            header == String(data:data.subdata(in:0 ..< 16), encoding:.utf8),
+            let size:Int = data.subdata(in:16 ..< 24).value(),
+            data.count >= size + 24
+        else { throw Exception.invalidHeader }
+        return try JSONDecoder().decode([Item].self, from:data.subdata(in:24 ..< 24 + size))
     }
 }

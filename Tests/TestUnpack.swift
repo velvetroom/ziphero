@@ -24,18 +24,18 @@ class TestUnpack:XCTestCase {
     }
     
     func testCreatesDirectory() {
-        try! zip.unpack(data:data, items:items, destination:directory)
+        try? zip.unpack(data:data, items:items, destination:directory)
         XCTAssertTrue(FileManager.default.fileExists(atPath:directory.path))
     }
     
     func testUnpackedItems() {
-        try! zip.unpack(data:data, items:items, destination:directory)
+        try? zip.unpack(data:data, items:items, destination:directory)
         XCTAssertTrue(FileManager.default.fileExists(atPath:directory.appendingPathComponent("sample1.jpg").path))
         XCTAssertTrue(FileManager.default.fileExists(atPath:directory.appendingPathComponent("sample2.jpg").path))
     }
     
     func testSampleSizes() {
-        try! zip.unpack(data:data, items:items, destination:directory)
+        try? zip.unpack(data:data, items:items, destination:directory)
         let blob0 = try! Data(contentsOf:directory.appendingPathComponent("sample1.jpg"))
         let blob1 = try! Data(contentsOf:directory.appendingPathComponent("sample2.jpg"))
         XCTAssertEqual(items[0].end - items[0].start, blob0.count)

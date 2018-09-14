@@ -30,27 +30,28 @@ class TestZip:XCTestCase {
     
     func testDescriptorSize() {
         let data = try! zip.zip(directory:directory)
-        let sizeData = data.subdata(in:0 ..< 8)
-        let size:Int? = sizeData.value()
-        XCTAssertEqual(144, size)
+        XCTAssertEqual(144, data.subdata(in:16 ..< 24).value())
     }
     
     func testHeader() {
         let data = try! zip.zip(directory:directory)
-        let headerData = data.subdata(in:8 ..< 24)
-        let header:String? = headerData.value()
-        XCTAssertEqual("iturbide.ZipHero", header)
+        XCTAssertEqual("iturbide.ZipHero", String(data:data.subdata(in:0 ..< 16), encoding:.utf8))
     }
     
     func testPackage() {
         let data = try! zip.zip(directory:directory)
-        let itemsData = data.subdata(in:24 ..< 168)
-        let items = try? JSONDecoder().decode([Item].self, from:itemsData)
-        XCTAssertNotNil(items)
+        XCTAssertNotNil(try? JSONDecoder().decode([Item].self, from:data.subdata(in:24 ..< 168)))
     }
     
     func testDataSize() {
         let data = try! zip.zip(directory:directory)
         XCTAssertEqual(45466, data.count)
+    }
+    
+    func testSave() {
+        let data = try! zip.zip(directory:directory)
+        let url = URL(fileURLWithPath:NSTemporaryDirectory()).appendingPathComponent("zop.data")
+        try! data.write(to:url)
+        print(url)
     }
 }
