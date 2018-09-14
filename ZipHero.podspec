@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 s.name             = 'ZipHero'
-s.version          = '1.0.0'
+s.version          = '1.0.14'
 s.summary          = 'Package your files'
 s.description      = <<-DESC
 Package and depackage multiple files into 1 single file
