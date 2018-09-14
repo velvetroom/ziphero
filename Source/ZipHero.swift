@@ -3,9 +3,16 @@ import Foundation
 public class ZipHero {
     public init() { }
     
-    public func package(directory:URL) throws -> Package {
+    func pack(directory:URL) throws -> Package {
         let files = try FileManager.default.contentsOfDirectory(atPath:directory.path)
         return try pack(directory:directory, files:files)
+    }
+    
+    func unpack(data:Data, items:[Item], destination:URL) throws {
+        try FileManager.default.createDirectory(at:destination, withIntermediateDirectories:true)
+        try items.forEach { item in
+            try data.subdata(in:item.start ..< item.end).write(to:destination.appendingPathComponent(item.name))
+        }
     }
     
     private func pack(directory:URL, files:[String]) throws -> Package {

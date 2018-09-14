@@ -1,7 +1,7 @@
 import XCTest
 @testable import ZipHero
 
-class TestPackage:XCTestCase {
+class TestPack:XCTestCase {
     private var zip:ZipHero!
     private var directory:URL!
     private var sample1Size:Int!
@@ -13,11 +13,11 @@ class TestPackage:XCTestCase {
         zip = ZipHero()
         directory = URL(fileURLWithPath:NSTemporaryDirectory()).appendingPathComponent("samples")
         try! FileManager.default.createDirectory(at:directory, withIntermediateDirectories:true)
-        let sample1 = try! Data.init(contentsOf:Bundle(for:TestPackage.self).url(
+        let sample1 = try! Data.init(contentsOf:Bundle(for:TestPack.self).url(
             forResource:"sample1", withExtension:"jpg")!)
-        let sample2 = try! Data.init(contentsOf:Bundle(for:TestPackage.self).url(
+        let sample2 = try! Data.init(contentsOf:Bundle(for:TestPack.self).url(
             forResource:"sample2", withExtension:"jpg")!)
-        let sample3 = try! Data.init(contentsOf:Bundle(for:TestPackage.self).url(
+        let sample3 = try! Data.init(contentsOf:Bundle(for:TestPack.self).url(
             forResource:"sample3", withExtension:"jpg")!)
         try! sample1.write(to:directory.appendingPathComponent("sample1.jpg"))
         try! sample2.write(to:directory.appendingPathComponent("sample2.jpg"))
@@ -32,26 +32,26 @@ class TestPackage:XCTestCase {
     }
     
     func testPackageSuccedes() {
-        XCTAssertNoThrow(try zip.package(directory:directory))
+        XCTAssertNoThrow(try zip.pack(directory:directory))
     }
     
     func testItemsCount() {
-        guard let package = try? zip.package(directory:directory) else { return XCTFail() }
+        guard let package = try? zip.pack(directory:directory) else { return XCTFail() }
         XCTAssertEqual(3, package.items.count)
     }
     
     func testItemName() {
-        guard let package = try? zip.package(directory:directory) else { return XCTFail() }
+        guard let package = try? zip.pack(directory:directory) else { return XCTFail() }
         XCTAssertEqual("sample1.jpg", package.items[0].name)
     }
     
     func testItem0Start() {
-        guard let package = try? zip.package(directory:directory) else { return XCTFail() }
+        guard let package = try? zip.pack(directory:directory) else { return XCTFail() }
         XCTAssertEqual(0, package.items[0].start)
     }
     
     func testItemsSize() {
-        guard let package = try? zip.package(directory:directory) else { return XCTFail() }
+        guard let package = try? zip.pack(directory:directory) else { return XCTFail() }
         package.items.forEach { item in
             switch item.name {
             case "sample1.jpg": XCTAssertEqual(sample1Size, item.end - item.start)
@@ -63,7 +63,7 @@ class TestPackage:XCTestCase {
     }
     
     func testDataSize() {
-        guard let package = try? zip.package(directory:directory) else { return XCTFail() }
+        guard let package = try? zip.pack(directory:directory) else { return XCTFail() }
         XCTAssertEqual(sample1Size + sample2Size + sample3Size + (separatorSize * 3), package.data.count)
     }
 }

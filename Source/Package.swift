@@ -1,7 +1,7 @@
 import Foundation
 
-public class Package {
-    public private(set) var data = Data()
+class Package {
+    private(set) var data = Data()
     private(set) var items = [Item]()
     private let separator = 0
     
