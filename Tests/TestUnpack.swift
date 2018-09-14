@@ -16,7 +16,7 @@ class TestUnpack:XCTestCase {
     }
     
     override func tearDown() {
-        try! FileManager.default.removeItem(at:directory)
+        try? FileManager.default.removeItem(at:directory)
     }
     
     func testUnpack() {
@@ -40,5 +40,9 @@ class TestUnpack:XCTestCase {
         let blob1 = try! Data(contentsOf:directory.appendingPathComponent("sample2.jpg"))
         XCTAssertEqual(items[0].end - items[0].start, blob0.count)
         XCTAssertEqual(items[1].end - items[1].start, blob1.count)
+    }
+    
+    func testExceptionSizeNotMatching() {
+        XCTAssertThrowsError(try zip.unpack(data:Data(), items:items, destination:directory))
     }
 }

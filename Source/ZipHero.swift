@@ -9,6 +9,7 @@ public class ZipHero {
     }
     
     func unpack(data:Data, items:[Item], destination:URL) throws {
+        try validate(data:data, items:items)
         try FileManager.default.createDirectory(at:destination, withIntermediateDirectories:true)
         try items.forEach { item in
             try data.subdata(in:item.start ..< item.end).write(to:destination.appendingPathComponent(item.name))
@@ -22,5 +23,13 @@ public class ZipHero {
             package.append(data:data, name:file)
         }
         return package
+    }
+    
+    private func validate(data:Data, items:[Item]) throws {
+        try items.forEach { item in
+            if item.end > data.count {
+               throw Exception.invalidData
+            }
+        }
     }
 }

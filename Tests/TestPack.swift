@@ -7,7 +7,6 @@ class TestPack:XCTestCase {
     private var sample1Size:Int!
     private var sample2Size:Int!
     private var sample3Size:Int!
-    private let separatorSize = 8
     
     override func setUp() {
         zip = ZipHero()
@@ -64,6 +63,6 @@ class TestPack:XCTestCase {
     
     func testDataSize() {
         guard let package = try? zip.pack(directory:directory) else { return XCTFail() }
-        XCTAssertEqual(sample1Size + sample2Size + sample3Size + (separatorSize * 3), package.data.count)
+        XCTAssertEqual(sample1Size + sample2Size + sample3Size, package.data.count)
     }
 }
