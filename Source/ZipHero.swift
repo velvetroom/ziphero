@@ -33,8 +33,7 @@ public class ZipHero {
     }
     
     private func pack(directory:URL, files:[String]) throws -> Package {
-        var package = Package()
-        try files.forEach { file in
+        return try files.reduce(into:Package()) { package, file in
             let data = try Data(contentsOf:directory.appendingPathComponent(file))
             var item = Item()
             item.name = file
@@ -43,7 +42,6 @@ public class ZipHero {
             item.end = package.data.count
             package.items.append(item)
         }
-        return package
     }
     
     private func validate(data:Data, items:[Item]) throws {
